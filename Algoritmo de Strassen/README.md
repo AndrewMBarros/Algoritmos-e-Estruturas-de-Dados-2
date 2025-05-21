@@ -15,12 +15,15 @@ Este repositório contém uma explicação teórica, implementação e análise 
 🔹 Etapa 1: Divisão das matrizes
 Dividir as matrizes de entrada A e B em 4 submatrizes cada, de tamanho n/2 × n/2:
 
+```text
 A = | A11  A12 |     B = | B11  B12 |
     | A21  A22 |         | B21  B22 |
+```
 
 🔹 Etapa 2: Cálculo das matrizes S₁ a S₁₀
 Criar 10 matrizes auxiliares, cada uma de dimensão n/2 × n/2, por meio de somas ou subtrações das submatrizes:
 
+```text
 S1  = B12 - B22 
 S2  = A11 + A12 
 S3  = A21 + A22 
@@ -31,7 +34,7 @@ S7  = A12 - A22
 S8  = B21 + B22 
 S9  = A11 - A21 
 S10 = B11 + B12
-
+```
 Podemos criar todas as 10 matrizes no tempo Θ(n²).
 
 🔹 Etapa 3: Cálculo dos produtos P₁ a P₇
@@ -52,23 +55,77 @@ P7 = S9  × S10
 
 As submatrizes da matriz C resultado são combinadas da seguinte forma:
 
+```text
 C11 = P5 + P4 - P2 + P6 
 C12 = P1 + P2 
 C21 = P3 + P4 
 C22 = P5 + P1 - P3 - P7
-
+```
 ✅ A combinação é feita em tempo Θ(n²)
+
+
 
 📊 Definição com Teorema Mestre
 
-....
+O Teorema Mestre define que, se temos uma recorrência da forma:
+
+    T(n) = a * T(n / b) + f(n)
+
+onde:
+
+- a ≥ 1  
+- b > 1  
+- f(n) é uma função não negativa
+
+Temos três casos:
+
+1. Se f(n) < n^log_b(a), então:  
+       T(n) = Θ(n^log_b(a))
+
+2. Se f(n) = n^log_b(a), então:  
+       T(n) = Θ(f(n) * log n)
+
+3. Se f(n) > n^log_b(a), então:  
+       T(n) = Θ(f(n))
+---
+
+🧠 Aplicação – Teorema Mestre no Algoritmo
+
+No código, as funções de soma de matrizes, criação das matrizes A e B e o cálculo das 4 submatrizes possuem complexidade:
+
+    f(n) = n²
+
+As multiplicações de matrizes (P1...P7) dividem as matrizes de entrada em submatrizes de tamanho n/2. Como realizamos 7 chamadas recursivas, temos:
+
+    T(n) = 7 * T(n / 2) + n²
+
+Agora aplicamos o Teorema Mestre:
+
+- a = 7  
+- b = 2  
+- f(n) = n²  
+- log_b(a) = log₂(7) ≈ 2.81
+
+Como:
+
+    n² < n^2.81
+
+Estamos no **caso 1** do Teorema Mestre, portanto:
+
+    T(n) = Θ(n^log₂7) ≈ Θ(n^2.81)
+
+
+✅ **Conclusão**:  
+A complexidade do algoritmo é **O(n^2.81)**, o que é mais eficiente que a multiplicação tradicional de matrizes, que possui complexidade **O(n³)**.
+
+
 
 
 Este trabalho da disciplina **Algoritmos e Estrutura de Dados II** foi desenvolvido por:
 
 - Andrew Matheus
 - Juliana Campos
-- Mateus
+- Mateus Henrique Freitas
 - Pedro Grangeiro
 - Sidney 
 
