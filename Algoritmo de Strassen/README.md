@@ -63,7 +63,7 @@ C22 = P5 + P1 - P3 - P7
 ```
 ✅ A combinação é feita em tempo Θ(n²)
 
-
+---
 
 📊 Definição com Teorema Mestre
 
@@ -119,8 +119,9 @@ Estamos no **caso 1** do Teorema Mestre, portanto:
 A complexidade do algoritmo é **O(n^2.81)**, o que é mais eficiente que a multiplicação tradicional de matrizes, que possui complexidade **O(n³)**.
 
 
+<br>
 
-
+---
 Este trabalho da disciplina **Algoritmos e Estrutura de Dados II** foi desenvolvido por:
 
 - Andrew Matheus
