@@ -128,7 +128,7 @@ Este trabalho da disciplina **Algoritmos e Estrutura de Dados II** foi desenvolv
 - Juliana Campos
 - Mateus Henrique Freitas
 - Pedro Grangeiro
-- Sidney 
+- Sidney Sant'Anna
 
 ## Repositório no GitHub
 [🔗 Acesse aqui o repositório](https://github.com/AndrewMBarros/Algoritmos-e-Estruturas-de-Dados-2/tree/main/Algoritmo%20de%20Strassen)
