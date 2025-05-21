@@ -183,14 +183,4 @@ print(f"Tempo - Subalgoritmo 2 (S1..S10): {tempos[1]:.6f} segundos")
 print(f"Tempo - Subalgoritmo 3 (P1..P7):  {tempos[2]:.6f} segundos")
 print(f"Tempo - Subalgoritmo 4 (Cij):     {tempos[3]:.6f} segundos")
 
-"""Podemos ver que há uma diferença entre o tempo contabilizado usando:
 
-```python
-start_= time.time()
-C = strassenAlgorithm(A, B)
-end_ = time.time()
-```
-
-E pela soma dos 4 subalgoritmos que é definido. Isso se dá por overheads que existem no meio das chamadas recursivas (empilhamento, garbage collector, etc.)
-
-"""
