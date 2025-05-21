@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-#Comparativo n ** 3 e n ** 2.81
-
 import matplotlib.pyplot as plt
 import numpy as np
 
