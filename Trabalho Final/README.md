@@ -138,6 +138,12 @@ Palavra: 'banana'
 ---
 
 ## 👥 Grupo 8
+Este trabalho da disciplina **Algoritmos e Estrutura de Dados II** foi desenvolvido por:
 
+- Andrew Matheus
+- Juliana Campos
+- Mateus Henrique Freitas
+- Pedro Grangeiro
+- Sidney Sant'Anna
 
 ---
