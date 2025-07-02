@@ -2,7 +2,7 @@
 
 ## 🧩 Descrição do Problema
 
-Dado um texto (string), o objetivo é **dividi-lo em substrings de forma que cada uma seja um palíndromo**, minimizando o número de cortes necessários.  
+Dada uma string, particioná-la em substrings de forma que cada uma seja um palíndromo (lê-se igual de frente para trás e vice-versa), minimizando o número de cortes necessários.
 Um **palíndromo** é uma palavra ou frase que se lê da mesma forma de trás para frente (ex: "ana", "radar", "noon").
 
 ---
@@ -20,27 +20,37 @@ O algoritmo implementado realiza:
 
 ## 🧠 Complexidade do Algoritmo
 
-### 1️⃣ Construção da Tabela de Palíndromos (`is_palin[i][j]`)
+## 📈 Análise de Complexidade (com somas explícitas)
 
-* Substrings de tamanho 1: `O(n)`
-* Substrings de tamanho 2: `O(n)`
-* Substrings de tamanho ≥ 3: `O(n²)`
+### O algoritmo tem duas fases principais:
 
-**Total da Fase 1: `O(n²)`**
 
-### 2️⃣ Programação Dinâmica (Cálculo dos Cortes)
+###  1️⃣ Construção da Tabela de Palíndromos
 
-* Para cada posição `i`, verifica todas as quebras `j`: `O(n²)`
+- Substrings de tamanho 1: $O(n)$
+- Substrings de tamanho 2: $O(n)$
+- Substrings de tamanho ≥ 3: $O(n^2)$
 
-**Total da Fase 2: `O(n²)`**
+ Soma desta fase:
+$O(n) + O(n) + O(n^2) = O(n^2)$
 
-### ✅ Complexidade Total
+<br>
 
-```
-O(n²) + O(n²) = O(n²)
-```
+###  2️⃣ Programação Dinâmica (Cálculo dos Cortes)
 
----
+- Para cada posição $i$, verifica todas as quebras $j$: $O(n^2)$
+
+<br>
+
+###  3️⃣ Complexidade Total do Algoritmo
+
+
+$O(n^2) + O(n^2) = O(n^2)$
+
+
+**Resultado Final:**  
+**Complexidade Total:** $O(n^2)$
+
 
 ## 📄 Código Principal
 
