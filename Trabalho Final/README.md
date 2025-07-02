@@ -1,5 +1,3 @@
----
-
 # 🔁 Grupo 8 - Número Máximo de Palavras Palíndromas em Texto
 
 ## 🧩 Descrição do Problema
@@ -141,7 +139,5 @@ Palavra: 'banana'
 
 ## 👥 Grupo 8
 
-Projeto desenvolvido para fins educacionais, focando em análise de algoritmos e programação dinâmica.  
-O código está otimizado para leitura, desempenho e clareza de estrutura.
 
 ---
