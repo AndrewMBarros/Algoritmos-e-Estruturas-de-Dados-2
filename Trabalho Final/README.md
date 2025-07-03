@@ -112,8 +112,10 @@ def min_palindrome_cuts(s):
 ## 🧪 Exemplos de Execução
 
 ```python
-def exemplos():
-    for palavra in ["aab", "geek", "noon", "banana"]:
+exemplos = ["aab", "geek", "noon", "banana"]
+
+def testar_exemplos():
+    for palavra in exemplos:
         cortes, partes, preproc, dp, total = min_palindrome_cuts(palavra)
         print(f"\nPalavra: '{palavra}'")
         print(f"  Cortes mínimos: {cortes}")
@@ -122,7 +124,7 @@ def exemplos():
         print(f"  Tempo DP (s): {dp:.6f}")
         print(f"  Tempo Total (s): {total:.6f}")
 
-exemplos()
+testar_exemplos()
 ```
 
 ### 📌 Saída Esperada:
