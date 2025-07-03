@@ -61,7 +61,7 @@ cuts = [0] * n
 
 exemplos = ["aab", "geek", "noon", "banana"]
     
-def exemplos():
+def testar_exemplos():
     for palavra in exemplos:
         cortes, partes, preproc, dp, total = min_palindrome_cuts(palavra)
         print(f"\nPalavra: '{palavra}'")
@@ -70,3 +70,5 @@ def exemplos():
         print(f"  Tempo pré-processamento (s): {preproc:.6f}")
         print(f"  Tempo DP (s): {dp:.6f}")
         print(f"  Tempo Total (s): {total:.6f}")
+        
+testar_exemplos()
