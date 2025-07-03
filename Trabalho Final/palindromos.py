@@ -58,3 +58,15 @@ cuts = [0] * n
     total_time = t3 - t0
 
     return cuts[-1], path[-1], preproc_time, dp_time, total_time
+def exemplos():
+    for palavra in ["aab", "geek", "noon", "banana"]:
+cortes, partes, preproc, dp, total = min_palindrome_cuts(palavra)
+    print(f"\nPalavra: '{palavra}'")
+    print(f"  Cortes mínimos: {cortes}")
+    print(f"  Palíndromos: {' | '.join(partes)}")
+    print(f"  Tempo pré-processamento (s): {preproc:.6f}")
+    print(f"  Tempo DP (s): {dp:.6f}")
+    print(f"  Tempo Total (s): {total:.6f}")
+
+exemplos()
+
